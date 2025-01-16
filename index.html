@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/index.css" />
+    <title>quicklist</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="title">
+          <img src="/assets/icons/logo.svg" alt="logo quicklist" />
+          <span>quicklist</span>
+        </div>
+        <div class="back">
+          <img src="/assets/icons/arrow.svg" alt="Ícone de voltar" />
+          <p>Voltar</p>
+        </div>
+        <h1>Compras da semana</h1>
+      </div>
+      <div class="content">
+        <form id="task-form">
+          <input
+            type="text"
+            id="task-input"
+            placeholder="Adicione um novo item"
+          />
+          <button id="btn" class="btn">Adicionar item</button>
+        </form>
+      </div>
+      <ul id="task-list"></ul>
+
+      <div id="notification" class="hidden">
+        <span class="icon"
+          ><img src="/assets/icons/warning-circle-filled.svg" alt=""
+        /></span>
+        <span class="message">O item foi removido da lista</span>
+        <button class="close-btn" onclick="closeNotification()">
+          <img src="/assets/icons/delete-small.svg" alt="" />
+        </button>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
